@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+clothify.access_clothify_product,access_clothify_product,clothify.model_clothify_product,base.group_user,1,1,1,1
+clothify.access_clothify_category,access_clothify_category,clothify.model_clothify_category,base.group_user,1,1,1,1

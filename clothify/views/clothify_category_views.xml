@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<record id="clothify_category_model_action" model="ir.actions.act_window">
+        <field name="name">Mens</field>
+         <!-- <field name="name">Womens</field>
+          <field name="name">Kids</field> -->
+        <field name="res_model">clothify.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

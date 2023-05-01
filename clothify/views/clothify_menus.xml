@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="clothify_menu_root" name="Clothify">
+        <menuitem id="clothify_all_product_menu" name="All Products">
+            <menuitem id="clothify_product_menu_action" action="clothify_product_model_action" />
+        </menuitem>
+        <menuitem id="clothify_category_menu" name="Categories">
+            <menuitem id="clothify_category_menu_action" action="clothify_category_model_action" />
+        </menuitem>
+    </menuitem>
+</odoo>
