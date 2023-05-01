@@ -9,8 +9,8 @@ class ClothifyProduct(models.Model):
     description = fields.Text()
     price = fields.Integer()
     size = fields.Integer()
-    quantity=fields.Integer()
-    Active=fields.Boolean(default=True)
+    quantity = fields.Integer()
+    Active = fields.Boolean(default=True)
     color = fields.Selection(
         selection=[
             ('black', 'Black'),
@@ -20,12 +20,20 @@ class ClothifyProduct(models.Model):
         ],
         default='black'
     )
-    state=fields.Selection(
+    state = fields.Selection(
         selection=[
-            ('new','New'),
-            ('cart','Add to Cart'),
-            ('delivered','Delivered'),
-            ('return','Return'),
+            ('new', 'New'),
+            ('cart', 'Add to Cart'),
+            ('delivered', 'Delivered'),
+            ('return', 'Return'),
         ],
         default='new',
     )
+    category_type = fields.Selection(
+        selection=[
+            ("mens","Mens"),
+            ("women","Women"),
+            ("kids","Kids"),
+        ]
+    )
+    tag_ids = fields.Many2many("clothify.tags")

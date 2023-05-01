@@ -19,7 +19,7 @@
             </tree>
         </field>
     </record>
-     <!-- FORM VIEW -->
+    <!-- FORM VIEW -->
     <record id="clothify_form_view" model="ir.ui.view">
         <field name="name">clothify.form.view</field>
         <field name="model">clothify.product</field>
@@ -33,15 +33,17 @@
                     <h1>
                         <field name="name" />
                     </h1>
+                    <field name="tag_ids" widget="many2many_tags" />
                     <group>
                         <group>
                             <group>
-                               
+                                
                                 <field name="size" />
                                 <field name="price" />
                             </group>
                             <group>
                                 <field name="quantity" />
+                                <field name="category_type" string="Category Type" />
                             </group>
                         </group>
                         <notebook>

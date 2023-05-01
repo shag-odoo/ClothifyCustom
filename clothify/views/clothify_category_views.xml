@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-<record id="clothify_category_model_action" model="ir.actions.act_window">
-        <field name="name">Mens</field>
-         <!-- <field name="name">Womens</field>
-          <field name="name">Kids</field> -->
-        <field name="res_model">clothify.category</field>
-        <field name="view_mode">tree,form</field>
+  <record id="clothify_category_men_model_action" model="ir.actions.act_window">
+    <field name="name">Mens</field>
+    <field name="res_model">clothify.category.men</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record id="clothify_category_women_model_action" model="ir.actions.act_window">
+    <field name="name">Womens</field>
+    <field name="res_model">clothify.category.women</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <record id="clothify_category_kids_model_action" model="ir.actions.act_window">
+    <field name="name">Kids</field>
+    <field name="res_model">clothify.category.kid</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- FORM VIEW FOR MENS -->
+  <record id="clothify_men_form_view" model="ir.ui.view">
+        <field name="name">clothify.men.form.view</field>
+        <field name="model">clothify.category.men</field>
+        <field name="arch" type="xml">
+            <form string="form_view">
+                <sheet>
+                    <h1>
+                        <field name="name" />
+                    </h1>
+                    <group>
+                        <group>
+                            <group>
+                                <field name="size" />
+                                <field name="price" />
+                                <field name="quantity" />
+                            </group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
     </record>
 </odoo>

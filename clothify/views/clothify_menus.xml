@@ -5,7 +5,13 @@
             <menuitem id="clothify_product_menu_action" action="clothify_product_model_action" />
         </menuitem>
         <menuitem id="clothify_category_menu" name="Categories">
-            <menuitem id="clothify_category_menu_action" action="clothify_category_model_action" />
+            <menuitem id="clothify_category_men_action" action="clothify_category_men_model_action" />
+            <menuitem id="clothify_category_women_action" action="clothify_category_women_model_action" />
+            <menuitem id="clothify_category_kids_action" action="clothify_category_kids_model_action" />
         </menuitem>
+        <menuitem id="clothify_tags_menu" name="Tags" action="clothify_tag_action" />
+
+          
+        
     </menuitem>
 </odoo>
