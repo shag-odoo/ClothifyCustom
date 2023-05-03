@@ -12,6 +12,7 @@
         'views/clothify_product_views.xml',
         'views/clothify_category_views.xml',
         'views/clothify_tags_views.xml',
+        'views/clothify_cart_views.xml',
         'views/clothify_menus.xml',
 
 

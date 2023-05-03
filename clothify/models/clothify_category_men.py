@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models,api
 
 
 class ClothifyCategoryMen(models.Model):
@@ -10,6 +10,10 @@ class ClothifyCategoryMen(models.Model):
     price=fields.Integer()
     quantity=fields.Integer()
     category=fields.Many2one('clothify.product')
-    newCategory=fields.Selection(
-        related='category.category_type'
-    )
+    
+    total_amount=fields.Integer(compute='_compute_total')
+
+    @api.depends('quantity','price')
+    def _compute_total(self):
+        for record in self:
+            record.total_amount=record.quantity*record.price

@@ -10,6 +10,7 @@
             <menuitem id="clothify_category_kids_action" action="clothify_category_kids_model_action" />
         </menuitem>
         <menuitem id="clothify_tags_menu" name="Tags" action="clothify_tag_action" />
+        <menuitem id="clothify_cart_menu" name="Cart" action="clothify_cart_model_action" />
 
           
         

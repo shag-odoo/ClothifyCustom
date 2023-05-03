@@ -4,3 +4,4 @@ clothify.access_clothify_category_men,access_clothify_category_men,clothify.mode
 clothify.access_clothify_category_women,access_clothify_category_women,clothify.model_clothify_category_women,base.group_user,1,1,1,1
 clothify.access_clothify_category_kid,access_clothify_category_kid,clothify.model_clothify_category_kid,base.group_user,1,1,1,1
 clothify.access_clothify_tags,access_clothify_tags,clothify.model_clothify_tags,base.group_user,1,1,1,1
+clothify.access_clothify_cart,access_clothify_cart,clothify.model_clothify_cart,base.group_user,1,1,1,1

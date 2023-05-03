@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields,api
 
 
 class ClothifyProduct(models.Model):
@@ -36,4 +36,19 @@ class ClothifyProduct(models.Model):
             ("kids","Kids"),
         ]
     )
+    
+    # MANY2MANY RELATIONSHIPS
     tag_ids = fields.Many2many("clothify.tags")
+    # MANY2ONE RELATIONSHIP
+    link_id=fields.Many2one('clothify.product')
+    @api.depends('state')
+    def add_to_cart(self):
+        for record in self:
+            record.state='cart'
+            record.link_id.product_name=record.name
+            record.link_id.cart_price=record.price
+        
+
+    def cancel(self):
+        self.state='new'
+   

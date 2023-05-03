@@ -34,6 +34,9 @@
                         <field name="name" />
                     </h1>
                     <field name="tag_ids" widget="many2many_tags" />
+                    <button name="cancel" string="Cancel" type="object" class="float-end" />
+                    <button name="add_to_cart" type="object" string="Add to Cart" class="float-end"/>
+                   
                     <group>
                         <group>
                             <group>
@@ -72,6 +75,7 @@
                 <field name="price" />
                 <field name="color" />
                 <field name="size" />
+                <field name="category_type" />
                 <separator />
                 <filter string="Available" name="state"
                     domain="['|',('state','=','new'),('state','=','cart')]" />

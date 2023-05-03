@@ -32,6 +32,8 @@
                                 <field name="size" />
                                 <field name="price" />
                                 <field name="quantity" />
+                                <field name="category" string='Product Type' />
+                                <field name="total_amount" /> 
                             </group>
                         </group>
                     </group>
