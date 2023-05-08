@@ -6,8 +6,8 @@
         <field name="view_mode">tree,form</field>
     </record>
     <!-- TREE VIEW -->
-    <record id='clothify_view_list' model='ir.ui.view'>
-        <field name='name'>clothify.view.list</field>
+    <record id='clothify_product_view_list' model='ir.ui.view'>
+        <field name='name'>clothify.product.view.list</field>
         <field name="model">clothify.product</field>
         <field name="arch" type="xml">
             <tree string="tree_view">
@@ -20,53 +20,45 @@
         </field>
     </record>
     <!-- FORM VIEW -->
-    <record id="clothify_form_view" model="ir.ui.view">
-        <field name="name">clothify.form.view</field>
+    <record id="clothify_product_form_view" model="ir.ui.view">
+        <field name="name">clothify.product.form.view</field>
         <field name="model">clothify.product</field>
         <field name="arch" type="xml">
             <form string="form_view">
-                <header>
-                    <!-- SHOWING STATE IN NAVIGATION BAR -->
-                    <field name="state" widget="statusbar" />
-                </header>
                 <sheet>
                     <h1>
                         <field name="name" />
                     </h1>
+                    <!-- TAGS CALLED (DEFINED IN ESTATE.PROPETY.PY) -->
                     <field name="tag_ids" widget="many2many_tags" />
-                    <button name="cancel" string="Cancel" type="object" class="float-end" />
-                    <button name="add_to_cart" type="object" string="Add to Cart" class="float-end"/>
-                   
-                    <group>
                         <group>
                             <group>
-                                
-                                <field name="size" />
-                                <field name="price" />
+                                <field name="state" string="Status" />
+                                <field name="price" string="Price" />
+                                <field name="quantity" />
+
                             </group>
                             <group>
-                                <field name="quantity" />
-                                <field name="category_type" string="Category Type" />
+                                <field name="color" />
+                                <field name="category_type" />
                             </group>
                         </group>
                         <notebook>
                             <page string="Description">
                                 <group>
+                                    <field name="size" />
                                     <field name="description" />
-                                    <field name="color" />
-                                    <field name="quantity" />
-                                    <field name="state" string="Status" />
+
                                 </group>
                             </page>
                         </notebook>
-                    </group>
                 </sheet>
             </form>
         </field>
     </record>
     <!-- SEARCH VIEW -->
-    <record id="clothify_view_search" model="ir.ui.view">
-        <field name="name">clothify.view.search</field>
+    <record id="clothify_product_view_search" model="ir.ui.view">
+        <field name="name">clothify.product.view.search</field>
         <field name="model">clothify.product</field>
         <field name="arch" type="xml">
             <search string="clothify_search">
